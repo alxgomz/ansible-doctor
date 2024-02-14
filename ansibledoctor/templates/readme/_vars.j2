@@ -50,9 +50,9 @@
 {% if item.example is mapping %}
 {{ item.example | to_nice_yaml(indent=2) }}
 {% else %}
-{% for ex_line in item.example %}
+{% for ex_line in item.example -%}
 {{ ex_line | replace("\n\n", "\n") }}
-{% endfor %}
+{% endfor -%}
 {% endif %}
 ```
 {% endif %}
