@@ -30,7 +30,7 @@
 {% endif %}
 {% if item.value is defined and item.value %}
 
-#### Default value
+#### Default value ({{ key }})
 
 ```YAML
 {% if item.value is mapping %}
@@ -44,7 +44,7 @@
 {% endif %}
 {% if item.example is defined and item.example %}
 
-#### Example usage
+#### Example usage ({{ key }})
 
 ```YAML
 {% if item.example is mapping %}
