@@ -15,14 +15,17 @@
 {% set deprecated = [item.deprecated] if item.deprecated is string else item.deprecated %}
 {% set deprecated_string = deprecated | map("replace", "\n\n", "\n") | safe_join("\n") %}
 {% if deprecated_string %}
-**_Deprecated:_** {{ deprecated_string }}<br />
+**_Deprecated:_** {{ deprecated_string }}
+
 {% else %}
-**_Deprecated_**<br />
+**_Deprecated_**
+
 {% endif %}
 {% endif %}
 {% if item.type is defined and item.type %}
 {% set type = [item.type] if item.type is string else item.type %}
-**_Type:_** {{ type | map("replace", "\n\n", "\n") | safe_join("\n") }}<br />
+**_Type:_** {{ type | map("replace", "\n\n", "\n") | safe_join("\n") }}
+
 {% endif %}
 {% endif %}
 {% if item.value is defined and item.value %}
